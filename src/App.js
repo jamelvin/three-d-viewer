@@ -13,11 +13,11 @@ function App() {
       <PresentationControls
         speed={1.5}
         global
-        zoom={1}
+        zoom={0.5}
         polar={[-Infinity, Infinity]}
         azimuth={[-Infinity, Infinity]}
       >
-        <Stage environment={null}>
+        <Stage environment={"studio"}>
           <Model scale={0.01} />
         </Stage>
       </PresentationControls>
