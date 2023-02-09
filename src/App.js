@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Canvas } from "@react-three/fiber";
+import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
+
+function Model(props) {
+  const { scene } = useGLTF("/PING_G430_MAX_DRIVER.GLB");
+  return <primitive object={scene} {...props} />;
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Canvas drp={[1, 2]} camera={{ fov: 45 }} style={{ position: "absolute" }}>
+      <color attach="background" args={["#fff"]} />
+      <PresentationControls
+        speed={1.5}
+        global
+        zoom={1}
+        polar={[-Infinity, Infinity]}
+        azimuth={[-Infinity, Infinity]}
+      >
+        <Stage environment={null}>
+          <Model scale={0.01} />
+        </Stage>
+      </PresentationControls>
+    </Canvas>
   );
 }
 
