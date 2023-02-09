@@ -1,5 +1,7 @@
 # Quick 3D model with React Three.js
 
+run `npm install`
+
 Make sure @react-three/fiber and @react-three/drei are installed by running
 
 `npm install @react-three/fiber @react-three/drei`
