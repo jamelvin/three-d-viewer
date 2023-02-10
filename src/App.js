@@ -9,7 +9,7 @@ function Model(props) {
 function App() {
   return (
     <Canvas drp={[1, 2]} camera={{ fov: 45 }} style={{ position: "absolute" }}>
-      <color attach="background" args={["#fff"]} />
+      <color attach="background" args={["#101010"]} />
       <PresentationControls
         speed={1.5}
         global
