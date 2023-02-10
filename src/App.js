@@ -2,7 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
 
 function Model(props) {
-  const { scene } = useGLTF("/PING_G430_MAX_DRIVER.GLB");
+  const { scene } = useGLTF("/TITLEIST_SCOTTY_CAMERON_2022_PHANTOM_X_5.5_PUTTER .glb");
   return <primitive object={scene} {...props} />;
 }
 
@@ -17,7 +17,7 @@ function App() {
         polar={[-Infinity, Infinity]}
         azimuth={[-Infinity, Infinity]}
       >
-        <Stage environment={"studio"}>
+        <Stage environment={null}>
           <Model scale={0.01} />
         </Stage>
       </PresentationControls>
