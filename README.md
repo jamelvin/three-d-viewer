@@ -1,3 +1,5 @@
+Slightly adapted from: https://www.youtube.com/watch?v=QaRIHrRclVk (https://github.com/coopercodes/bmwGLB)
+
 # Quick 3D model with React Three.js
 
 run `npm install`
